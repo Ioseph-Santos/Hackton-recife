@@ -1,0 +1,38 @@
+<!-- Hack/templates/sensor_data.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dados do Sensor</title>
+</head>
+<body>
+    <h1>Dados do Sensor</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID do Sensor</th>
+                <th>Leitura do Sensor</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>CEP</th>
+                <th>Distância do Sensor ao Solo</th>
+                <th>Status da Área</th>
+                <th>Data e Hora</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for sensor in sensores %}
+            <tr>
+                <td>{{ sensor.id_sensor }}</td>
+                <td>{{ sensor.leitura_sensor }}</td>
+                <td>{{ sensor.latitude }}</td>
+                <td>{{ sensor.longitude }}</td>
+                <td>{{ sensor.cep }}</td>
+                <td>{{ sensor.distancia_sensor_solo }}</td>
+                <td>{{ sensor.status_area }}</td>
+                <td>{{ sensor.data_hora }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
